@@ -18,6 +18,7 @@
   --accent-text-color: #353430;
   --title-color: #FFC2E6;
   background: url(../images/cover-image-light.png) center /cover no-repeat;
+  background-attachment: fixed;
 }
 
 .page.theme_light .dark-text-decoration {
@@ -26,7 +27,7 @@
 
 
 @media (prefers-color-scheme: light) {
-  .page.theme_light{
+  .page{
     --bg-color: #FFF1F7;
     --text-color: #353430;
     --accent-color: #FF0070;
@@ -36,11 +37,11 @@
     --title-color: #FFC2E6;
     }
 
-    .page.theme_light .dark-text-decoration {
+    .page .dark-text-decoration {
       display: none;
     }
 
-    .page.theme_light {
+    .page {
       background: url(../images/cover-image-light.png) center /cover no-repeat;
     }
 
