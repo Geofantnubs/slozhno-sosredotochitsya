@@ -1,0 +1,75 @@
+@media (min-width: 375px) and (width < 768px) {
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .aspect {
+    height: 89vh;
+  }
+
+  .decorated-zone::before {
+    top: 10px;
+    right: 10px;
+  }
+
+  .decorated-zone::after {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .dark-text-decoration {
+    top: 10px;
+    right: 37px;
+  }
+
+  .header {
+    margin-block-end: 40px;
+  }
+
+  .header__theme-menu {
+    padding-block-start: 20%;
+  }
+
+  .title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+
+  .header__title {
+    margin-inline-start: 0;
+  }
+
+  .header__text {
+    margin-block-start: 12%;
+  }
+
+  .main,
+  .blog {
+    display: grid;
+    gap: 50px;
+  }
+
+  .article {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .accent_paragraph_width {
+    margin-inline-start: 0;
+  }
+
+  .accent_title_width {
+    width: 100%;
+  }
+
+  .picture {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-block-start: 10px;
+  }
+
+  .footer {
+    margin-block-start: 40px;
+  }
+}

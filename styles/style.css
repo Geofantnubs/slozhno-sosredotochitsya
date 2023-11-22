@@ -1,5 +1,231 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  color: var(--text-color);
+  font-family: var(--fonts, sans-serif);
+  font-weight: var(--fw-normal);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-color: var(--bg-color);
+}
+
+.container {
+  padding: 0 20px;
+}
+
+.aspect {
+  width: 100%;
+  height: 137vh;
+}
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+}
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+}
+
+  .dark-text-decoration {
+  position: absolute;
+  top: 20px;
+  right: 47px;
+  color: var(--accent-color);
+  text-transform: uppercase;
+}
+
+  .dark-text-decoration::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  right: -18px;
+  z-index: 1;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  fill: #FF0070;
+  background-color: var(--accent-color);
+  filter: drop-shadow(0px 0px 4px #FF0070);
+}
+
+.header {
+  position: relative;
+  z-index: 0;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  margin-block-end: 57px;
+  background: url(../images/cover-image-dark.png) center /cover no-repeat;
+}
+
+.header__theme-menu {
+  justify-self: end;
+  padding-block-start: 26%;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  gap: 12px;
+}
+
+.header__theme-menu-button {
+  border: 1px solid transparent;
+  padding: 0 13px;
+  color: var(--accent-color);
+  text-transform: lowercase;
+  background-color: transparent;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+  pointer-events: none;
+}
+
+.title {
+  align-self: center;
+  color: var(--title-color);
+  font-family: var(--fonts, sans-serif);
+  font-weight: var(--fw-bold);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-style: normal;
+  line-height: 82.5%;
+  text-shadow: 4px 4px 0px var(--accent-color);
+}
+
+.header__title {
+  margin-inline-start: -20px;
+}
+
+
+.header__text {
+  justify-self: end;
+  width: max(355px, 50%);
+  height: fit-content;
+  margin-block-start: 6%;
+  color: var(--accent-text-color);
+  font-weight: var(--fw-bold);
+  background-color: var(--accent-color);
+}
+
+.header__text-span {
+  display: block;
+}
+
+.main,
+.blog {
+  display: grid;
+  gap: 80px;
+}
+
+.article {
+  display: grid;
+  grid-template-columns: repeat(3 , 1fr);
+  gap: 20px;
+}
+
+.article:nth-child(even) {
+  display: flex;
+  flex-direction: column;
+}
+
+.article__paragraph {
+  display: grid;
+  grid-column: 2 / 4;
+  gap: 10px;
+}
+
+.accent_paragraph_width {
+  margin-inline-start: 5px;
+}
+
+.article__text {
+  color: inherit;
+}
+
+.article__title {
+  grid-column: 1 / 2;
+  color: var(--accent-color);
+  font-size: inherit;
+}
+
+.accent_title {
+  font-weight: var(--fw-normal);
+}
+
+.accent_title_width {
+  width: 30%;
+}
+
+.accent_title:not(:first-child) {
+  margin-block-start: 10px;
+}
+
+.article__subtitle {
+  height: fit-content;
+  color: var(--accent-text-color);
+  font-size: inherit;
+  background-color: var(--accent-color);
+}
+
+.paragraph_link {
+  text-decoration: none;
+  text-shadow: 1px 2px 0px var(--accent-color);
+}
+
+.picture {
+  display: grid;
+  gap: 20px;
+  padding-block-start: 20px;
+
+}
+
+.pictures_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-1 {
+  grid-column: 1 / 3;
+}
+
+.image-2 {
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
+}
+
+.image-3 {
+  grid-row: 2 / 4;
+}
+
+.image-4 {
+  grid-column: 2 / 3;
+}
+
+.image-5 {
+  grid-column: 2 / 4;
+}
+
+.footer {
+  position: relative;
+  display: grid;
+  align-content: center;
+  min-width: 355px;
+  min-height: 667px;
+  margin-block-start: 60px;
+  text-align: center;
 }
