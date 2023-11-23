@@ -6,7 +6,7 @@
   --decoration-color: #FF0070;
   --accent-text-color: #000028;
   --title-color: #DB00FF;
-  --fonts: 'IBM Plex mono';
+  --fonts: 'IBM Plex mono',monospace;
   --fs-normal: 18px;
   --lh-normal: 130%;
   --fw-normal: 400;

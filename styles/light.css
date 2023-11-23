@@ -37,9 +37,11 @@
     --title-color: #FFC2E6;
     }
 
-    .page .dark-text-decoration {
+    .page.theme_auto .dark-text-decoration {
       display: none;
     }
+
+
 
     .page {
       background: url(../images/cover-image-light.png) center /cover no-repeat;
